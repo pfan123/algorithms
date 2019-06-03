@@ -27,5 +27,8 @@ R(n) = Θ(f(n))` 亦可记做 `O(f(n))
 - **O(C^n)— **指数时间：完成任务所需要的步骤是一个常数的n次方（非常大的数字）。
 
 
+Other Resouce:
 
 [Big-O Cheat Sheet](http://bigocheatsheet.com/)
+[对数 logarithm](https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0)
+[阶乘函数 factorial](https://baike.baidu.com/item/%E9%98%B6%E4%B9%98%E5%87%BD%E6%95%B0)
