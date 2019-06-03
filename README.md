@@ -28,7 +28,7 @@
 
 ## 选择排序
 
-```
+```js
 function selectionSort (arr:any[]) {
   const len = arr.length
   let minIndex
