@@ -5,7 +5,7 @@
 [算法复杂度和大O表示法](./docs/算法复杂度和大O表示法.md)
 
 
-## 二分查找
+## 二分查找（有序元素列表）
 
 ```js
   function binarySearch(arr, value){
