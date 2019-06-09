@@ -55,3 +55,5 @@ R(n) = Θ(f(n))` 亦可记做 `O(f(n))
 [对数 logarithm](https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0)
 
 [阶乘函数 factorial](https://baike.baidu.com/item/%E9%98%B6%E4%B9%98%E5%87%BD%E6%95%B0)
+
+[算法图解1 - 二分查找和大O表示法](http://jartto.wang/2018/11/22/algorithm1/)

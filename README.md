@@ -8,8 +8,8 @@
 
 - 数组
 - 链表
-- 队列（queue）
-- 栈 (stack、call stack)
+- 队列（queue， 入队、出队）
+- 栈 (stack、call stack，压入、弹出)
 - 哈希表（hash table 散列，数组结构）
 - 堆（heap 又称优先队列 priority queue）
 - 字典树
@@ -47,6 +47,8 @@
 [算法复杂度和大O表示法](./docs/算法复杂度和大O表示法.md)
 
 [数组和链表](./docs/数组和链表.md)
+
+[递归](./docs/递归.md)
 
 
 ## 二分查找（有序元素列表）
