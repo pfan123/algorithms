@@ -50,7 +50,7 @@ R(n) = Θ(f(n))` 亦可记做 `O(f(n))
 
 - O(log n)比O(n)快，当需要搜索的元素越多时，前者比后者快得越多。
 
-## Other Resouce:
+## Other Resouces:
 
 [Big-O Cheat Sheet](http://bigocheatsheet.com/)
 

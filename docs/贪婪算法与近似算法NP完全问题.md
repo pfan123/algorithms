@@ -92,6 +92,6 @@
 - 贪婪算法易于实现、运行速度快，是不错的近似算法。
 
 
-## Other Resouce:
+## Other Resouces:
 
 [狄克斯特拉算法与贪婪算法](http://jartto.wang/2018/11/29/algorithm6/)
