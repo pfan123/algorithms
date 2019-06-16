@@ -133,4 +133,10 @@ function quickSort (array:number[]) {
 ```
 
 
+## Other Resouces:
+
 [动画可视化数据结构和算法工具-visualgo](https://visualgo.net/en)
+
+[leetcode](https://leetcode.com/problemset/all/)
+
+[剑指Offer](https://github.com/Jack-Cherish/LeetCode)
