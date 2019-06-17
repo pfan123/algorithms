@@ -6,15 +6,15 @@
 
 数据结构是在计算机中组织和存储数据的一种特殊方式，使得数据可以高效地被访问和修改。更确切地说，数据结构是数据值的集合，表示数据之间的关系，也包括了作用在数据上的函数或操作。
 
-- 数组
-- 链表 (单向链表和双向链表)
-- 队列（queue， 入队、出队）
-- 栈 (stack、call stack，压入、弹出)
-- 哈希表（hash table 散列，数组结构）
+- [数组](./docs/数组和链表.md)
+- [链表](./docs/数组和链表.md) (单向链表和双向链表)
+- [队列](./docs/递归.md)（queue， 入队、出队）
+- [栈](./docs/递归.md) (stack、call stack，压入、弹出)
+- [哈希表](./docs/散列表.md)（hash table 散列，数组结构）
 - 堆（heap 又称优先队列 priority queue）
 - 字典树
 - 树
-  - 二叉查找树(binary search tree)
+  - [二叉查找树](./docs/二叉树和二叉查找树.md)(binary search tree)
   - AVL 树
   - 红黑树
   - 后缀树
