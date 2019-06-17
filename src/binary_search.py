@@ -2,13 +2,13 @@
 # -*- coding: UTF-8 -*-
 import math
 
-def binary_search(list, value):
+def binary_search(array, value):
   low = 0
-  high = len(list) - 1
+  high = len(array) - 1
 
   while(low <= high):
     mid = math.ceil((low + high)/2)
-    guess = list[mid]
+    guess = array[mid]
     if guess == value:
       return mid
     if guess > value:
