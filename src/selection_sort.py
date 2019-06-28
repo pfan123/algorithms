@@ -13,13 +13,8 @@ def selection_sort(list):
       if(list[j] < list[minIndex]):
         minIndex = j
 
-    temp = list[i]
-    list[i] = list[minIndex]
-    list[minIndex] = temp
+    list[minIndex], list[i] = list[i], list[minIndex]
 
 
   return list
 
-# my_list = [1, 3, 5, 7, 9]
-
-# print(selection_sort(my_list))

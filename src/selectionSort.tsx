@@ -1,7 +1,6 @@
 function selectionSort (arr:number[]) {
   const len = arr.length
   let minIndex
-  let temp
 
   for(let i = 0; i < len -1 ; i ++){
       minIndex = i
@@ -11,10 +10,11 @@ function selectionSort (arr:number[]) {
           }
       }
 
-      temp = arr[i]
-      arr[i] = arr[minIndex]
-      arr[minIndex] = temp
+      [ arr[minIndex], arr[i] ] = [ arr[i], arr[minIndex] ]
   }
 
   return arr
 }
+
+
+
