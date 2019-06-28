@@ -255,6 +255,8 @@ class binarySearchTree {
 
 [动画可视化数据结构和算法工具-visualgo](https://visualgo.net/en)
 
+[algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
+
 [leetcode](https://leetcode.com/problemset/all/)
 
 [剑指Offer](https://github.com/Jack-Cherish/LeetCode)
