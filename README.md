@@ -82,57 +82,6 @@ K最近邻算法
   }
 ```
 
-## 选择排序
-
-```js
-function selectionSort (arr:number[]) {
-  const len = arr.length
-  let minIndex
-  let temp
-
-  for(let i = 0; i < len -1 ; i ++){
-      minIndex = i
-      for(let j = i+1; j<len; j++){
-          if(arr[j] < arr[minIndex]){
-              minIndex = j
-          }
-      }
-
-      temp = arr[i]
-      arr[i] = arr[minIndex]
-      arr[minIndex] = temp
-  }
-
-  return arr
-}
-```
-
-## 快速排序
-
-```js
-function quickSort (array:number[]) {
-  const len = array.length
-  if(len < 2) return array  // 基线条件
-
-  // 递归条件
-  let pivot = array[0] // 基准值
-  let left = []
-  let right = []
-
-  // 分区（partition）
-  for(let i = 1; i < len; i++){
-    if( array[i] <= pivot ){
-      left.push(array[i])
-    } else {
-      right.push(array[i])
-    }
-  }
-
-  return quickSort(left).concat(pivot, quickSort(right))
-}
-
-```
-
 ## 二叉树
 
 ```js
@@ -243,6 +192,232 @@ class binarySearchTree {
   }
 }
 
+```
+
+## 冒泡排序
+
+```js
+function bubbleSort (array = []) {
+  const len = array.length - 1
+  for ( let i = len; i > 0; i--) {
+      for ( let j = 0; j <= i - 1; j++ ) {
+          if (array[j] > array[i]) {
+            [array[j], array[i]] = [array[i], array[j]]
+          }
+      }
+  }
+  return array
+}
+```
+
+
+## 选择排序
+
+```js
+function selectionSort (array:number[]) {
+  const len = array.length
+  let minIndex
+  let temp
+
+  for(let i = 0; i < len -1 ; i ++){
+      minIndex = i
+      for(let j = i+1; j<len; j++){
+          if(array[j] < array[minIndex]){
+              minIndex = j
+          }
+      }
+
+      temp = array[i]
+      array[i] = array[minIndex]
+      array[minIndex] = temp
+  }
+
+  return array
+}
+```
+
+## 插入排序
+
+```js
+function insertionSort (array = []) {
+  const len = array.length
+  let preIndex
+  let current
+
+  for(let i = 1; i < len; i ++){
+      preIndex = i - 1
+      current = array[i]
+      while (preIndex >= 0 && array[preIndex] > current) {
+        [array[preIndex+1], array[preIndex]] = [array[preIndex], array[preIndex+1]]
+        preIndex--
+      }
+  }
+
+  return array
+}
+```
+
+## 希尔排序
+
+```js
+function shellSort(array = []) {
+  let len = array.length
+  let gap = 1
+
+  while(gap < len/3) {          //动态定义间隔序列
+      gap =gap*3+1
+  }
+
+  while (gap >= 1) {
+      for (let i = gap; i < len; i++) {
+          for (let j = i; j >= gap && array[j] < array[j-gap];j -= gap) {
+              [array[j], array[j-gap]] = [array[j-gap], array[j]]
+          }
+      }
+      gap = (gap-1)/3
+  }
+
+  return array
+}
+```
+
+## 归并排序
+
+```js
+// 采用自上而下的递归方法
+function mergeSort(array) {  
+    let len = array.length
+
+    if(len < 2) return array  // 基线条件
+
+    let middle = Math.floor(len / 2)
+    let left = array.slice(0, middle)
+    let right = array.slice(middle)
+    return merge(mergeSort(left), mergeSort(right))
+}
+
+function merge(left, right){
+    let result = []
+
+    while (left.length && right.length) {
+        if (left[0] <= right[0]) {
+            result.push(left.shift())
+        } else {
+            result.push(right.shift())
+        }
+    }
+
+    while (left.length)
+        result.push(left.shift())
+
+    while (right.length)
+        result.push(right.shift())
+
+    return result
+}
+```
+
+## 快速排序
+
+```js
+function quickSort (array:number[]) {
+  const len = array.length
+  if(len < 2) return array  // 基线条件
+
+  // 递归条件
+  let pivot = array[0] // 基准值
+  let left = []
+  let right = []
+
+  // 分区（partition）
+  for(let i = 1; i < len; i++){
+    if( array[i] <= pivot ){
+      left.push(array[i])
+    } else {
+      right.push(array[i])
+    }
+  }
+
+  return quickSort(left).concat(pivot, quickSort(right))
+}
+
+```
+
+## 堆排序
+
+```js
+class Node{
+  constructor(data, left, right){
+    this.data = data
+    this.left = left
+    this.right = right
+  }
+
+  show () {
+    return this.data
+  }
+}
+
+/**
+ * BinarySearchTree 二分叉树类
+ */
+class BinarySearchTree {
+  constructor () {
+    this.root = null
+  }
+
+  insert (data) {
+    const n = new Node(data, null, null);
+    if (this.root === null) {
+      this.root = n
+    } else {
+      let current = this.root
+      let parent
+      while (true) {
+        parent = current;
+        if (data < current.data) {
+          current = current.left;
+          if (current === null) {
+            parent.left = n
+            break
+          }
+        } else {
+          current = current.right;
+          if (current === null) {
+            parent.right = n
+            break
+          }
+        }
+      }
+    }
+  }
+
+  // 中序遍历
+  inOrder (node, arr = []) {
+    if (node !== null) {
+       this.inOrder(node.left, arr)
+       arr.push(node.show())
+       this.inOrder(node.right, arr)
+    }
+  }
+
+  getOrder () {
+      const orderArr = []
+      this.inOrder(this.root, orderArr)
+      return orderArr
+  }
+
+}
+
+function heapSort (array) {
+    const len = array.length
+    if(len < 2) return array  // 基线条件
+    const binarySearchTree = new BinarySearchTree()
+    for(let i = len - 1; i >= 0; i--){
+        binarySearchTree.insert(array[i])
+    }
+    return binarySearchTree.getOrder()
+}
 ```
 
 
