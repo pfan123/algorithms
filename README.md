@@ -26,15 +26,15 @@
 ## 算法主题
 
 - 搜索
-  - 二分查找
+  - [二分查找](src/binary_search.py)
 - 排序
-  - 冒泡排序
-  - 选择排序
-  - 插入排序
-  - 希尔排序
-  - 归并排序
-  - 快速排序
-  - 堆排序
+  - [冒泡排序](src/bubble_sort.py)
+  - [选择排序](src/selection_sort.py)
+  - [插入排序](src/insertion_sort.py)
+  - [希尔排序](src/shell_sort.py)
+  - [归并排序](src/merge_sort.py)
+  - [快速排序](src/quick_sort.py)
+  - [堆排序](src/heap_sort.py)
 
 ## 文章
 
