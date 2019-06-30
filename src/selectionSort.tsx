@@ -1,4 +1,4 @@
-function selectionSort (arr:number[]) {
+function selectionSort (arr:number[]):number[] {
   const len = arr.length
   let minIndex
 
