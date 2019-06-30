@@ -66,13 +66,13 @@ K最近邻算法
 ## 二分查找（有序元素列表）
 
 ```js
-  function binarySearch(arr, value){
+  function binarySearch(array, value){
     let start = 0
-    let end = arr.length() -1
+    let end = array.length() -1
     let guess
     while(start <= end){
       let mid = Math.ceil((start + end)/2)
-      guess = arr[mid]
+      guess = array[mid]
       if(guess == value)return mid
       if(guess > value) end = mid -1
       if(guess < value) start = mid + 1
