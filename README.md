@@ -252,6 +252,8 @@ class binarySearchTree {
 
 [algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
 
+[JS-Sorting-Algorithm](https://github.com/hustcc/JS-Sorting-Algorithm)
+
 [leetcode](https://leetcode.com/problemset/all/)
 
 [剑指Offer](https://github.com/Jack-Cherish/LeetCode)
