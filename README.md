@@ -434,3 +434,7 @@ function heapSort (array) {
 [leetcode](https://leetcode.com/problemset/all/)
 
 [剑指Offer](https://github.com/Jack-Cherish/LeetCode)
+
+[LeetCode Cookbook](https://books.halfrost.com/leetcode/)
+
+[fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
