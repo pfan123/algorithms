@@ -65,6 +65,58 @@
 
 ![集合覆盖问题](http://img.pfan123.com/chapter7.png)
 
+### 背包问题之贪心算法解决方案
+
+如果用贪心算法处理背包问题，它有一个前提放入背包的物品从本质上说是连续的，那 么可以简单地通过物品的单价除以单位体积来确定物品的价值，先装价值最高的物品直到该物品装完或者将背包装满，接着装价值次高的物品，直到 这种物品也装完或将背包装满，以此类推。
+
+思路是
+
+- (1) 背包的容量为 W，物品的价格为 v，重量为 w。
+- (2) 根据 v/w 的比率对物品排序。
+- (3) 按比率的降序方式来考虑物品。
+- (4) 尽可能多地放入每个物品。
+
+如给出了四个物品的重量、价格和比率
+
+| 物品 |  A   |    B | C    | D    |
+| ---- | :--: | ---: | ---- | ---- |
+| 价格 |  50  |  140 | 60   | 60   |
+| 尺寸 |  5   |   20 | 10   | 12   |
+| 比率 |  10  |    7 | 6    | 5    |
+
+```
+interface Good {
+  value: number
+  size: number
+}
+
+const knapsack = (goods: Good[], capacity : number) => {
+  goods.sort((a: Good, b: Good) => {
+    return parseFloat(b.value / b.size) - parseFloat(a.value / a.size)
+  })
+  let load = 0
+  let totalValues = 0
+  let i = 0
+  while (load < capacity && i < 4) {
+    const { size, value } = goods[i]
+    if ( size <= capacity - load)  {
+      load += size
+      totalValues += value
+    } else {
+      // 计算可以添加的比例值
+      totalValues += (value / size) * (capacity - load)
+      load = capacity
+    }
+
+    i++
+  }
+
+  return totalValues
+}
+
+// 测试代码
+// knapsack([{size: 5, value: 50}, {size: 20, value: 140}, {size: 10, value: 60}, {size: 12, value: 60}], 30)
+```
 ## NP 完全问题
 
 `NP` 完全问题的简单定义是，以难解著称的问题，如旅行商问题和集合覆盖问题。很多非常聪明的人都认为，根本不可能编写出可快速解决这些问题的算法。
