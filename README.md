@@ -18,7 +18,7 @@
 - [栈](./docs/递归.md) (stack、call stack，压入、弹出)
 - [哈希表](./docs/散列表.md)（hash table 散列，数组结构）
 - 堆（heap 又称优先队列 priority queue）
-- 字典树
+- 字典树（Trie）
 - 树
   - [二叉查找树](./docs/二叉树和二叉查找树.md)(binary search tree)
   - AVL 树
@@ -56,7 +56,7 @@
 
 [二叉树和二叉查找树](./docs/二叉树和二叉查找树.md)
 
-[字典数（Trie）](./docs/字典数（Trie）.md)
+[字典树（Trie）](./docs/字典树（Trie）.md)
 
 [排序算法](./docs/排序算法.md)
 
