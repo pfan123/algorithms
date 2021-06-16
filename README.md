@@ -17,7 +17,7 @@
 - [队列](./docs/递归.md)（queue， 入队、出队）
 - [栈](./docs/递归.md) (stack、call stack，压入、弹出)
 - [哈希表](./docs/散列表.md)（hash table 散列，数组结构）
-- [堆（heap 又称优先队列 priority queue）](./docs/堆（Heap）.md)
+- [堆](./docs/堆（Heap）.md)（heap 又称优先队列 priority queue）
 - [字典树（Trie）](./docs/字典树（Trie）.md)
 - 树
   - [二叉查找树](./docs/二叉树和二叉查找树.md)(binary search tree)
